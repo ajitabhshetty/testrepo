@@ -1,0 +1,10 @@
+policies:
+  - name: s3-tag-policy
+    resource: terraform.aws_s3_bucket
+    filters:
+      - "tag:owner": absent
+      - "tag:project": absent
+  - name: s3-sse-policy
+    resource: terraform.aws_s3_bucket
+    filters:
+    - server_side_encryption_configuration: present
