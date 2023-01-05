@@ -1,0 +1,5 @@
+policies:
+  - name: test-dynamodb-encrypts
+    resource: terraform.aws_dynamodb_table
+    filters:
+      - server_side_encryption_configuration: absent
